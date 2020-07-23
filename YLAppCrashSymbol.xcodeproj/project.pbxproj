@@ -12,7 +12,54 @@
 		A033B12124C7D76D00E2F6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A033B12024C7D76D00E2F6DB /* Assets.xcassets */; };
 		A033B12424C7D76D00E2F6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A033B12224C7D76D00E2F6DB /* Main.storyboard */; };
 		A033B12724C7D76D00E2F6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A033B12624C7D76D00E2F6DB /* main.m */; };
+		A0E5601024C83B0D00865DB4 /* YLSymbolParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5600F24C83B0D00865DB4 /* YLSymbolParser.m */; };
+		A0E5602724C8415A00865DB4 /* YLMethodVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5602624C8415900865DB4 /* YLMethodVisitor.m */; };
+		A0E5602924C841A200865DB4 /* libMachObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E5601C24C8408B00865DB4 /* libMachObjC.a */; };
+		A0E5602E24C842AA00865DB4 /* CDVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5602D24C842AA00865DB4 /* CDVisitor.m */; };
+		A0E5603024C8644600865DB4 /* CDClassDump.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5602F24C8644600865DB4 /* CDClassDump.m */; };
+		A0E5603224C8648B00865DB4 /* CDSearchPathState.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5603124C8648B00865DB4 /* CDSearchPathState.m */; };
+		A0E5603424C8649E00865DB4 /* CDTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5603324C8649E00865DB4 /* CDTypeController.m */; };
+		A0E5603624C864BE00865DB4 /* CDStructureTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5603524C864BE00865DB4 /* CDStructureTable.m */; };
+		A0E5603824C864C900865DB4 /* CDStructureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E5603724C864C900865DB4 /* CDStructureInfo.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0E5601B24C8408B00865DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 013D1F1113A5AE5A00BF0A67;
+			remoteInfo = MachObjC;
+		};
+		A0E5601D24C8408B00865DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01EB825F13A590D9003EDE60;
+			remoteInfo = "class-dump";
+		};
+		A0E5601F24C8408B00865DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 013D1EFB13A5A0F100BF0A67;
+			remoteInfo = deprotect;
+		};
+		A0E5602124C8408B00865DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01B02CFF13A5B0DC0047BC53;
+			remoteInfo = formatType;
+		};
+		A0E5602324C8408B00865DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0165B8B11827137D00CC647F;
+			remoteInfo = UnitTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A033B11724C7D76C00E2F6DB /* YLAppCrashSymbol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLAppCrashSymbol.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +72,18 @@
 		A033B12524C7D76D00E2F6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A033B12624C7D76D00E2F6DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A033B12824C7D76D00E2F6DB /* YLAppCrashSymbol.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YLAppCrashSymbol.entitlements; sourceTree = "<group>"; };
+		A0E5600E24C83B0D00865DB4 /* YLSymbolParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLSymbolParser.h; sourceTree = "<group>"; };
+		A0E5600F24C83B0D00865DB4 /* YLSymbolParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLSymbolParser.m; sourceTree = "<group>"; };
+		A0E5601124C83D3500865DB4 /* YLAppCrashSymbol.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLAppCrashSymbol.pch; sourceTree = "<group>"; };
+		A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "class-dump.xcodeproj"; path = "YLAppCrashSymbol/class-dump/class-dump.xcodeproj"; sourceTree = "<group>"; };
+		A0E5602524C8415900865DB4 /* YLMethodVisitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLMethodVisitor.h; sourceTree = "<group>"; };
+		A0E5602624C8415900865DB4 /* YLMethodVisitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLMethodVisitor.m; sourceTree = "<group>"; };
+		A0E5602D24C842AA00865DB4 /* CDVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVisitor.m; path = "YLAppCrashSymbol/class-dump/Source/CDVisitor.m"; sourceTree = SOURCE_ROOT; };
+		A0E5602F24C8644600865DB4 /* CDClassDump.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDClassDump.m; path = "../class-dump/Source/CDClassDump.m"; sourceTree = "<group>"; };
+		A0E5603124C8648B00865DB4 /* CDSearchPathState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDSearchPathState.m; path = "../class-dump/Source/CDSearchPathState.m"; sourceTree = "<group>"; };
+		A0E5603324C8649E00865DB4 /* CDTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDTypeController.m; path = "../class-dump/Source/CDTypeController.m"; sourceTree = "<group>"; };
+		A0E5603524C864BE00865DB4 /* CDStructureTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDStructureTable.m; path = "../class-dump/Source/CDStructureTable.m"; sourceTree = "<group>"; };
+		A0E5603724C864C900865DB4 /* CDStructureInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDStructureInfo.m; path = "../class-dump/Source/CDStructureInfo.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E5602924C841A200865DB4 /* libMachObjC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +101,10 @@
 		A033B10E24C7D76C00E2F6DB = {
 			isa = PBXGroup;
 			children = (
+				A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */,
 				A033B11924C7D76C00E2F6DB /* YLAppCrashSymbol */,
 				A033B11824C7D76C00E2F6DB /* Products */,
+				A0E5602824C841A200865DB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +119,13 @@
 		A033B11924C7D76C00E2F6DB /* YLAppCrashSymbol */ = {
 			isa = PBXGroup;
 			children = (
-				A0E55FF524C8351900865DB4 /* class-dump */,
 				A033B11A24C7D76C00E2F6DB /* AppDelegate.h */,
 				A033B11B24C7D76C00E2F6DB /* AppDelegate.m */,
-				A0E55FF424C834C900865DB4 /* Resource */,
-				A0E55FF324C8348C00865DB4 /* Supporting Files */,
 				A033B11D24C7D76C00E2F6DB /* ViewController.h */,
 				A033B11E24C7D76C00E2F6DB /* ViewController.m */,
-				A033B12624C7D76D00E2F6DB /* main.m */,
+				A0E5600A24C839A800865DB4 /* Core */,
+				A0E55FF424C834C900865DB4 /* Resource */,
+				A0E55FF324C8348C00865DB4 /* Supporting Files */,
 			);
 			path = YLAppCrashSymbol;
 			sourceTree = "<group>";
@@ -72,8 +133,10 @@
 		A0E55FF324C8348C00865DB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A033B12624C7D76D00E2F6DB /* main.m */,
 				A033B12524C7D76D00E2F6DB /* Info.plist */,
 				A033B12824C7D76D00E2F6DB /* YLAppCrashSymbol.entitlements */,
+				A0E5601124C83D3500865DB4 /* YLAppCrashSymbol.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -87,11 +150,48 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		A0E55FF524C8351900865DB4 /* class-dump */ = {
+		A0E5600A24C839A800865DB4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A0E5602C24C8427B00865DB4 /* ref-to-class-dump */,
+				A0E5602524C8415900865DB4 /* YLMethodVisitor.h */,
+				A0E5602624C8415900865DB4 /* YLMethodVisitor.m */,
+				A0E5600E24C83B0D00865DB4 /* YLSymbolParser.h */,
+				A0E5600F24C83B0D00865DB4 /* YLSymbolParser.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A0E5601324C8408B00865DB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0E5601C24C8408B00865DB4 /* libMachObjC.a */,
+				A0E5601E24C8408B00865DB4 /* class-dump */,
+				A0E5602024C8408B00865DB4 /* deprotect */,
+				A0E5602224C8408B00865DB4 /* formatType */,
+				A0E5602424C8408B00865DB4 /* UnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0E5602824C841A200865DB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "class-dump";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0E5602C24C8427B00865DB4 /* ref-to-class-dump */ = {
+			isa = PBXGroup;
+			children = (
+				A0E5603124C8648B00865DB4 /* CDSearchPathState.m */,
+				A0E5603524C864BE00865DB4 /* CDStructureTable.m */,
+				A0E5603724C864C900865DB4 /* CDStructureInfo.m */,
+				A0E5603324C8649E00865DB4 /* CDTypeController.m */,
+				A0E5602D24C842AA00865DB4 /* CDVisitor.m */,
+				A0E5602F24C8644600865DB4 /* CDClassDump.m */,
+			);
+			name = "ref-to-class-dump";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +220,7 @@
 		A033B10F24C7D76C00E2F6DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YL;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = wuyonglin;
 				TargetAttributes = {
@@ -139,12 +240,56 @@
 			mainGroup = A033B10E24C7D76C00E2F6DB;
 			productRefGroup = A033B11824C7D76C00E2F6DB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A0E5601324C8408B00865DB4 /* Products */;
+					ProjectRef = A0E5601224C8408B00865DB4 /* class-dump.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A033B11624C7D76C00E2F6DB /* YLAppCrashSymbol */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A0E5601C24C8408B00865DB4 /* libMachObjC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMachObjC.a;
+			remoteRef = A0E5601B24C8408B00865DB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A0E5601E24C8408B00865DB4 /* class-dump */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "class-dump";
+			remoteRef = A0E5601D24C8408B00865DB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A0E5602024C8408B00865DB4 /* deprotect */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = deprotect;
+			remoteRef = A0E5601F24C8408B00865DB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A0E5602224C8408B00865DB4 /* formatType */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = formatType;
+			remoteRef = A0E5602124C8408B00865DB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A0E5602424C8408B00865DB4 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = A0E5602324C8408B00865DB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A033B11524C7D76C00E2F6DB /* Resources */ = {
@@ -163,7 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E5603024C8644600865DB4 /* CDClassDump.m in Sources */,
+				A0E5603624C864BE00865DB4 /* CDStructureTable.m in Sources */,
+				A0E5603224C8648B00865DB4 /* CDSearchPathState.m in Sources */,
+				A0E5603424C8649E00865DB4 /* CDTypeController.m in Sources */,
+				A0E5603824C864C900865DB4 /* CDStructureInfo.m in Sources */,
+				A0E5601024C83B0D00865DB4 /* YLSymbolParser.m in Sources */,
+				A0E5602724C8415A00865DB4 /* YLMethodVisitor.m in Sources */,
 				A033B11F24C7D76C00E2F6DB /* ViewController.m in Sources */,
+				A0E5602E24C842AA00865DB4 /* CDVisitor.m in Sources */,
 				A033B12724C7D76D00E2F6DB /* main.m in Sources */,
 				A033B11C24C7D76C00E2F6DB /* AppDelegate.m in Sources */,
 			);
@@ -301,11 +454,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P739YA92CW;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YLAppCrashSymbol/YLAppCrashSymbol.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/YLAppCrashSymbol/class-dump/Source";
 				INFOPLIST_FILE = YLAppCrashSymbol/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyl.YLAppCrashSymbol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -320,11 +476,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P739YA92CW;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YLAppCrashSymbol/YLAppCrashSymbol.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/YLAppCrashSymbol/class-dump/Source";
 				INFOPLIST_FILE = YLAppCrashSymbol/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyl.YLAppCrashSymbol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

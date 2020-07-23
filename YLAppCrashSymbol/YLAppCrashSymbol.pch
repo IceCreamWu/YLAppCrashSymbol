@@ -1,0 +1,18 @@
+//
+//  YLAppCrashSymbol.pch
+//  YLAppCrashSymbol
+//
+//  Created by wuyonglin on 2020/7/22.
+//  Copyright © 2020 wuyonglin. All rights reserved.
+//
+
+#ifndef YLAppCrashSymbol_pch
+#define YLAppCrashSymbol_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#include <Foundation/Foundation.h>
+#import "CDExtensions.h"
+#define __cmd __PRETTY_FUNCTION__
+
+#endif /* YLAppCrashSymbol_pch */

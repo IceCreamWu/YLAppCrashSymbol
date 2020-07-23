@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YLSymbolParser.h"
 
 #define MACHO_BTN_TAG   1
 #define CRASH_BTN_TAG   2
@@ -44,18 +45,60 @@
 }
 
 - (IBAction)didClickSymbol:(NSButton *)sender {
-    if (self.machOURL == nil) {
-        [self showAlertTitle:@"错误" message:@"请选择MachO文件！"];
-    }
-    else if (self.crashURL == nil) {
+//    if (self.machOURL == nil) {
+//        [self showAlertTitle:@"错误" message:@"请选择MachO文件！"];
+//    }
+//    else if (self.crashURL == nil) {
+//        [self showAlertTitle:@"错误" message:@"请选择Crash日志！"];
+//    }
+    if (self.crashURL == nil) {
         [self showAlertTitle:@"错误" message:@"请选择Crash日志！"];
     }
     
-    NSMutableString *str = [[NSMutableString alloc] init];
-    for (int i = 0; i < 100; i++) {
-        [str appendString:@"测试测试测试TestTest\n"];
+    YLSymbolParser *parser = [[YLSymbolParser alloc] init];
+    [parser parseWithMachOURL:self.machOURL error:nil];
+    
+    NSString *crashText = [NSString stringWithContentsOfFile:self.crashURL.relativePath encoding:NSUTF8StringEncoding error:nil];
+    NSArray *crashTextLines = [crashText componentsSeparatedByString:@"\n"];
+    
+    NSMutableArray *symbolTextLines = [[NSMutableArray alloc] init];
+    NSString *binName = nil;
+    for (NSString *textLine in crashTextLines) {
+        
+        NSArray *components = [textLine componentsSeparatedByString:@" "];
+        NSMutableArray<NSString *> *infos = [[NSMutableArray alloc] init];
+        for (NSString *item in components) {
+            if (item.length > 0) {
+                [infos addObject:item];
+            }
+        }
+        // 获取可执行文件名
+        if (infos.count > 1 && [infos[0] hasPrefix:@"Path:"]) {
+            const char *name = [infos[infos.count - 1] UTF8String];
+            const char *tmp = strrchr(name, '/');
+            if (tmp) {
+                name = tmp + 1;
+            }
+            binName = @(name);
+            [symbolTextLines addObject:textLine];
+            continue;
+        }
+        
+        if (infos.count < 6 || ![infos[1] isEqualToString:binName] || ![infos[4] isEqualToString:@"+"]) {
+            [symbolTextLines addObject:textLine];
+            continue;
+        }
+        
+        YLFunction *function = [parser getFunctionOfAddress:infos[5].longLongValue];
+        NSInteger index = [textLine rangeOfString:infos[3]].location;
+        NSString *symbolLine = [NSString stringWithFormat:@"%@%@", [textLine substringToIndex:index], function.name];
+        if (function.name.length == 0) {
+            symbolLine = [NSString stringWithFormat:@"%@(%@)", textLine, function.positionName];
+        }
+        [symbolTextLines addObject:symbolLine];
     }
-    self.textView.string = str;
+    self.textView.string = [symbolTextLines componentsJoinedByString:@"\n"];
+
 }
 
 - (void)showAlertTitle:(NSString *)title message:(NSString *)msg {
